@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript тапсырмалары</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        .task {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px #00000015;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        .result {
+            background: #dcfce7;
+            padding: 12px;
+            border-radius: 8px;
+            color: #166534;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript — 10 тапсырма</h1>
+
+<div id="tasks"></div>
+
+<script>
+const tasks = [
+    ["Кәмелеттік жас", 18 >= 18 ? "Кіруге рұқсат" : "Кіруге тыйым салынады"],
+    ["Емтиханнан өтті ме?", 75 >= 50 ? "Емтиханнан өтті" : "Қайта тапсыру қажет"],
+    ["Оң, теріс немесе нөл", -5 > 0 ? "Оң сан" : -5 < 0 ? "Теріс сан" : "Нөл"],
+    ["Студенттің бағасы", 85 >= 90 ? "Өте жақсы" : 85 >= 70 ? "Жақсы" : 85 >= 50 ? "Қанағаттанарлық" : "Қайта тапсыру қажет"],
+    ["Ауа температурасы", 15 < 0 ? "Суық" : 15 <= 20 ? "Салқын" : "Жылы"],
+    ["Жұп немесе тақ сан", 8 % 2 === 0 ? "Жұп сан" : "Тақ сан"],
+    ["Бағдаршам", "Жүр"],
+    ["Дүкендегі жеңілдік", "22500 ₸"],
+    ["Жүйеге кіру", "Қош келдіңіз!"],
+    ["Ақылды колледж", "Кіруге рұқсат"]
+];
+
+tasks.forEach((task, index) => {
+    document.getElementById("tasks").innerHTML += `
+        <div class="task">
+            <h2>${index + 1}-тапсырма. ${task[0]}</h2>
+            <div class="result">Нәтиже: ${task[1]}</div>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>
